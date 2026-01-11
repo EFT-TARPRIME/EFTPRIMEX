@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFT PRIME | The Apex of Tarkov Software</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700&display=swap');
+
+        :root {
+            --primary: #fbbf24;
+            --accent: #3b82f6;
+            --success: #22c55e;
+        }
+
+        body {
+            background-color: #020202;
+            color: #fafafa;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-syncopate { font-family: 'Syncopate', sans-serif; }
+
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .neon-text { text-shadow: 0 0 15px rgba(251, 191, 36, 0.6); }
+
+        .glass-card {
+            background: rgba(15, 15, 15, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 40px rgba(251, 191, 36, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* Estilos para la nueva sección de imágenes */
+        .feature-image-container img {
+            transition: transform 0.7s ease, filter 0.5s ease;
+        }
+        
+        .glass-card:hover .feature-image-container img {
+            transform: scale(1.1);
+            filter: grayscale(0);
+        }
+
+        .status-pulse {
+            width: 8px; height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-grid">
+
+    <nav class="fixed w-full z-[100] px-8 py-6 flex justify-between items-center transition-all duration-500 glass-card border-none">
+        <div class="flex items-center gap-3">
+            <img src="tu-logo.png" alt="Logo" class="h-8 w-auto"> 
+            <div class="font-syncopate text-2xl font-bold tracking-tighter">
+                EFT<span class="text-yellow-500">PRIME</span>
+            </div>
+        </div>
+        <div class="hidden lg:flex space-x-8 text-[10px] uppercase tracking-[0.3em] font-bold">
+            <a href="#home" class="hover:text-yellow-500 transition">Home</a>
+            <a href="#features" class="hover:text-yellow-500 transition">Security</a>
+            <a href="#pricing" class="hover:text-yellow-500 transition">Pricing</a>
+            <a href="#faq" class="hover:text-yellow-500 transition">FAQ</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="hidden md:block text-[10px] font-bold text-green-500 uppercase"><span class="status-pulse mr-2"></span>Bypass Active</span>
+            <button class="bg-yellow-500 text-black px-6 py-2 text-[10px] font-black uppercase tracking-widest hover:bg-white transition">LOGIN</button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20">
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-yellow-500/5 to-transparent pointer-events-none"></div>
+        
+        <div data-aos="zoom-out" data-aos-duration="1500" class="flex flex-col items-center">
+            <img src="tu-logo.png" alt="EFT PRIME" class="h-28 w-auto mb-8 drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]">
+            
+            <h1 class="font-syncopate text-5xl md:text-9xl font-black mb-4 leading-none tracking-tighter italic">
+                DOMINATE THE <br><span class="text-yellow-500 neon-text">WIPE</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light mb-10 tracking-wide italic">
+                "The most trusted name in Tarkov private software since 2022."
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#pricing" class="bg-yellow-500 text-black font-black px-12 py-5 text-sm uppercase tracking-widest hover:scale-110 transition-all">Get Started</a>
+                <a href="#" class="border border-white/20 hover:border-yellow-500 px-12 py-5 text-sm uppercase tracking-widest transition-all glass-card">Join Community</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="status" class="py-10 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+            <div class="glass-card p-4 text-center">
+                <p class="text-[10px] text-gray-500 uppercase mb-1">Aimbot Core</p>
+                <p class="font-bold text-green-500 text-sm italic">● UNDETECTED</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-[10px] text-gray-500 uppercase mb-1">Visuals (ESP)</p>
+                <p class="font-bold text-green-500 text-sm italic">● UNDETECTED</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-[10px] text-gray-500 uppercase mb-1">HWID Spoofer</p>
+                <p class="font-bold text-yellow-500 text-sm italic">● UPDATING</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-[10px] text-gray-500 uppercase mb-1">DMA Support</p>
+                <p class="font-bold text-green-500 text-sm italic">● ONLINE</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-32 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="font-syncopate text-4xl font-bold mb-10 leading-tight">PREMIUM <br><span class="text-yellow-500">ENGINEERING</span></h2>
+                <div class="grid gap-8">
+                    <div class="flex gap-6">
+                        <i class="fas fa-shield-halved text-3xl text-yellow-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 uppercase italic">Advanced Kernel Drive</h4>
+                            <p class="text-gray-400 text-sm">Operating at Ring 0, our software remains invisible to standard anti-cheat scans and signature detection.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <i class="fas fa-ghost text-3xl text-blue-500"></i>
+                        <div>
+                            <h4 class="font-bold text-lg mb-2 uppercase italic">Stream Proof Tech</h4>
+                            <p class="text-gray-400 text-sm">Clean recordings every time. Your viewers see exactly what they should: a pro-level gameplay without overlays.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80" class="rounded-3xl border border-white/10 grayscale">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-10 bg-black/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-syncopate text-center text-3xl md:text-5xl font-black mb-20 italic" data-aos="fade-up">
+                COSMOCHEATS'S <span class="text-yellow-500 neon-text">FEATURES</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card overflow-hidden group" data-aos="fade-up">
+                    <div class="feature-image-container relative h-72 overflow-hidden">
+                        <img src="EFTAimbot.gif" 
+                             class="w-full h-full object-cover grayscale opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020202] to-transparent"></div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-syncopate text-2xl font-bold mb-4 text-white group-hover:text-yellow-500 transition">Aimbot & Silent Aimbot</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Our EFT cheats have a highly customizable aimbot that improves your shooting by automatically targeting enemies with smooth movements and real time bullet trajectory. The silent aimbot lets you kill enemies without visible aim adjustments so you can stay undetected by other players and anti-cheat systems. Combined with our ESP and wallhack options you have full awareness of enemy positions, loot locations and quest objectives through walls and obstacles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-image-container relative h-72 overflow-hidden">
+                        <img src="EFTExploit.gif" 
+                             class="w-full h-full object-cover grayscale opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#020202] to-transparent"></div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-syncopate text-2xl font-bold mb-4 text-white group-hover:text-yellow-500 transition">ESP/Wallhack Options</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Our undetected EFT cheats have smooth high performance ESP and wallhack features that let you see enemies, teammates and loot through walls in real time. With customizable settings for health bars, distance, skeleton tracking and equipped weapons you can plan your moves and avoid surprises. The integrated radar hack adds a minimap overlay showing all players and loot nearby so you can track threats easily.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-10 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-syncopate text-center text-3xl mb-16 italic">USER REVIEWS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8" data-aos="fade-up">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-6">"Been using the Monthly Operator for 3 wipes now. Support is fast and the ESP is the cleanest on the market."</p>
+                    <span class="text-white font-bold text-xs uppercase">— Ghost_Operator</span>
+                </div>
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-6">"The Silent Aim is insane. Looks 100% legit if you set it up right. Highly recommend the Discord VIP community."</p>
+                    <span class="text-white font-bold text-xs uppercase">— TarkovVeteran</span>
+                </div>
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-yellow-500 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-6">"Fastest updates I've ever seen. Game patched at 10AM, Prime was ready by 12PM. Unbeatable service."</p>
+                    <span class="text-white font-bold text-xs uppercase">— EU_Raider</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 relative overflow-hidden">
+        <div class="text-center mb-20">
+            <h2 class="font-syncopate text-4xl font-bold italic" data-aos="fade-down">TACTICAL ACCESS</h2>
+        </div>
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-10">
+            <div class="glass-card p-10 text-center" data-aos="fade-right">
+                <h3 class="font-syncopate text-xl mb-4">DAILY</h3>
+                <p class="text-5xl font-black mb-8">$9.99</p>
+                <ul class="text-sm space-y-4 text-gray-400 mb-10">
+                    <li>Full Feature Access</li>
+                    <li>24h Subscription</li>
+                    <li>Standard Support</li>
+                </ul>
+                <button class="w-full py-4 border border-white/10 hover:bg-white hover:text-black font-bold transition">BUY NOW</button>
+            </div>
+            <div class="glass-card p-10 text-center border-2 border-yellow-500 bg-yellow-500/5 scale-110" data-aos="fade-up">
+                <h3 class="font-syncopate text-xl mb-4">MONTHLY</h3>
+                <p class="text-5xl font-black mb-8 text-yellow-500">$65.00</p>
+                <ul class="text-sm space-y-4 text-gray-200 mb-10">
+                    <li><b>Free Spoofer Included</b></li>
+                    <li>30 Days Access</li>
+                    <li>VIP Discord Role</li>
+                </ul>
+                <button class="w-full py-4 bg-yellow-500 text-black font-bold transition">BEST VALUE</button>
+            </div>
+            <div class="glass-card p-10 text-center" data-aos="fade-left">
+                <h3 class="font-syncopate text-xl mb-4">LIFETIME</h3>
+                <p class="text-5xl font-black mb-8">$499.00</p>
+                <ul class="text-sm space-y-4 text-gray-400 mb-10">
+                    <li>DMA Supported</li>
+                    <li>Permanent License</li>
+                    <li>Direct Developer Line</li>
+                </ul>
+                <button class="w-full py-4 border border-white/10 hover:bg-white hover:text-black font-bold transition">GO PRO</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 px-10">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-syncopate text-center text-3xl mb-16 italic">COMMON QUESTIONS</h2>
+            <div class="space-y-6">
+                <div class="glass-card p-6 cursor-pointer group">
+                    <h4 class="font-bold text-yellow-500 mb-2 uppercase tracking-widest">Is it safe to use on my main account?</h4>
+                    <p class="text-gray-400 text-sm">While we maintain a 0-detection record in 2026, we always recommend playing "legit" and using secondary accounts for maximum security.</p>
+                </div>
+                <div class="glass-card p-6 cursor-pointer group">
+                    <h4 class="font-bold text-yellow-500 mb-2 uppercase tracking-widest">Does it support Windows 11?</h4>
+                    <p class="text-gray-400 text-sm">Yes, we support Windows 10 and 11 (all builds). Virtualization (VT-x/AMD-V) must be enabled in your BIOS.</p>
+                </div>
+                <div class="glass-card p-6 cursor-pointer group">
+                    <h4 class="font-bold text-yellow-500 mb-2 uppercase tracking-widest">What happens during game updates?</h4>
+                    <p class="text-gray-400 text-sm">Our system automatically locks during patches to prevent detections. Time is always compensated once we are back online.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-black border-t border-white/5 text-center px-6">
+        <div class="flex items-center justify-center gap-4 mb-8">
+            <img src="tu-logo.png" alt="Logo" class="h-8 w-auto">
+            <div class="font-syncopate text-2xl font-bold">EFT<span class="text-yellow-500">PRIME</span></div>
+        </div>
+        <div class="flex justify-center space-x-8 mb-10 text-[10px] tracking-[0.4em] uppercase font-black">
+            <a href="#" class="text-gray-500 hover:text-yellow-500 transition">Telegram</a>
+            <a href="#" class="text-gray-500 hover:text-yellow-500 transition">Support</a>
+            <a href="#" class="text-gray-500 hover:text-yellow-500 transition">Showcase</a>
+        </div>
+        <p class="text-[10px] text-gray-700 max-w-2xl mx-auto leading-relaxed uppercase">
+            EFT Prime is a private security research tool. We do not encourage breaking game Terms of Service. Use at your own risk.
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            window.scrollY > 50 ? nav.style.backgroundColor = 'rgba(2, 2, 2, 0.95)' : nav.style.backgroundColor = 'transparent';
+        });
+    </script>
+</body>
+</html>
