@@ -8,13 +8,13 @@
     <meta name="description" content="Dominate Tarkov with EFT PRIME. High-performance, undetected cheats featuring Aimbot, ESP, Wallhack, and DMA support. The most secure private software since 2022.">
     <meta name="keywords" content="EFT Cheats, Escape from Tarkov Hacks, Tarkov Aimbot, EFT ESP, Tarkov Private Software, Undetected EFT Cheats, EFT DMA">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tu-dominio.com/">
+    <link rel="canonical" href="https://tarkovcheatsprime.com/">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="EFT PRIME | The Apex of Tarkov Software">
     <meta property="og:description" content="Advanced Kernel Drive software for Escape from Tarkov. Undetected Aimbot, ESP, and Stream Proof technology.">
     <meta property="og:image" content="tu-logo.png">
-    <meta property="og:url" content="https://tu-dominio.com/">
+    <meta property="og:url" content="https://tarkovcheatsprime.com/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EFT PRIME - Tarkov Private Cheats">
@@ -115,6 +115,19 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+
+        /* Estilo para el Modal de TOS */
+        #tos-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(10px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body class="bg-grid">
@@ -297,10 +310,28 @@
             <img src="tu-logo.png" alt="EFT PRIME Footer Logo" class="h-8 w-auto">
             <div class="font-syncopate text-2xl font-bold">EFT<span class="text-yellow-500">PRIME</span></div>
         </div>
+        
+        <div class="mb-8">
+            <a href="javascript:void(0)" onclick="openTOS()" class="text-[10px] uppercase tracking-widest font-bold text-gray-500 hover:text-yellow-500 transition">Terms of Service & Refund Policy</a>
+        </div>
+
         <p class="text-[10px] text-gray-700 max-w-2xl mx-auto leading-relaxed uppercase">
             EFT Prime is a private security research tool. We do not encourage breaking game Terms of Service. Use at your own risk.
         </p>
     </footer>
+
+    <div id="tos-modal">
+        <div class="glass-card p-10 max-w-2xl w-full max-h-[80vh] overflow-y-auto relative">
+            <button onclick="closeTOS()" class="absolute top-5 right-5 text-yellow-500 text-xl"><i class="fas fa-times"></i></button>
+            <h2 class="font-syncopate text-2xl text-yellow-500 mb-6 italic">TERMS OF SERVICE</h2>
+            <div class="text-sm text-gray-300 space-y-4 text-left leading-relaxed font-light">
+                <p><strong>1. Digital Goods:</strong> Due to the nature of our digital products, once the license key has been provided or activated, the service is considered rendered.</p>
+                <p><strong>2. NO REFUND POLICY:</strong> <span class="text-yellow-500 font-bold uppercase">We do not accept refunds or returns under any circumstances.</span> This includes computer incompatibility, game updates, or account bans. All sales are final.</p>
+                <p><strong>3. Use Policy:</strong> We are not responsible for how you use this software. Usage is at your own risk.</p>
+            </div>
+            <button onclick="closeTOS()" class="mt-8 bg-yellow-500 text-black font-black px-8 py-3 text-xs uppercase tracking-widest w-full hover:scale-105 transition">I AGREE</button>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -309,6 +340,16 @@
             const nav = document.querySelector('nav');
             window.scrollY > 50 ? nav.style.backgroundColor = 'rgba(2, 2, 2, 0.95)' : nav.style.backgroundColor = 'transparent';
         });
+
+        // Funciones para el Modal de TOS
+        function openTOS() {
+            document.getElementById('tos-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeTOS() {
+            document.getElementById('tos-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
     </script>
 </body>
 </html>
