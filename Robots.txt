@@ -1,0 +1,10 @@
+# Robots.txt para EFT PRIME
+User-agent: *
+Allow: /
+
+# Evitar que se indexen archivos de sistema o carpetas de recursos si existieran
+Disallow: /cgi-bin/
+Disallow: /admin/
+
+# Enlace al Sitemap (si decides crear uno en el futuro)
+# Sitemap: https://tu-dominio.com/sitemap.xml
